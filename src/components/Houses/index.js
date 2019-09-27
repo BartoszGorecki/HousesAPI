@@ -35,12 +35,13 @@ class Houses extends Component {
     })
   }
 
-  removeHouse = id => {
+  removeHouse = (e, id) => {
+    e.stopPropagation()
     axios.delete(`${url}/houses/${id}`)
       .then(response => {
-        console.log(response)
         if (response.status === 200 && response.statusText === 'OK') {
           alert('House deleted successfully')
+          this.fetchHouses()
         } else {
           alert('Could not delete house!')
         }
@@ -49,6 +50,8 @@ class Houses extends Component {
         console.log(err)
       })
   }
+
+  showItem = id => this.props.history.push(`/houses/${id}`)
 
   renderMainContent = () => {
       const {houses, loading} = this.state;
@@ -66,12 +69,12 @@ class Houses extends Component {
     const {houses} = this.state;
     return houses.map(({address, area, owner, price, _id}) => {
       return (
-        <div className='houseItem' key={_id}>
+        <div onClick={() => this.showItem(_id)} className='houseItem' key={_id}>
           <span>Address: {address}</span>
           <span>Area: {area}</span>
           <span>Owner: {owner}</span>
           <span>Price: {price}</span>
-          <div className='close' onClick={() => this.removeHouse(_id)}>X</div>
+          <div className='close' onClick={e => this.removeHouse(e, _id)}>X</div>
         </div>
       )
     })

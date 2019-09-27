@@ -18,7 +18,7 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/houses" component={Houses} />
             <Route exact path="/create" component={CreateHouse} />
-            <Route exact path="/:houseId" component={HouseDetails} />
+            <Route exact path="/houses/:houseId" component={HouseDetails} />
           </Switch>
         </BrowserRouter>
       </div>
