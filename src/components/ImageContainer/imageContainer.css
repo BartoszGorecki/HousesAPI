@@ -1,0 +1,22 @@
+.imageWrapper {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.imageText {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+}
+.overlay {
+  background-color: rgba(62, 119, 226, 0.5);
+  height: 100%;
+  z-index: 2;
+}

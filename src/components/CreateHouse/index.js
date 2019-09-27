@@ -4,7 +4,6 @@ import "./createHouse.css";
 import axios from "axios";
 
 import {url} from '../../constans';
-const uuidv4 = require('uuid/v4');
 
 class CreateHouse extends Component {
 
@@ -13,10 +12,6 @@ class CreateHouse extends Component {
     area: '',
     owner: '',
     price: ''
-  }
-
-  componentDidMount() {
-    console.log(uuidv4())
   }
 
   changeInput = ({target: {name, value}}) => this.setState({[name]: value})

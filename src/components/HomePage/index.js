@@ -1,10 +1,19 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom'
 import "./homePage.css";
+import ImageContainer from '../ImageContainer';
 
-import {textContent} from '../../constans';
+import {images, textContent} from '../../constans';
 
 class HomePage extends Component {
+
+  renderImages = () => {
+    return images.map(({number, overlay, text}) => {
+      return (
+        <ImageContainer key={number} url={number} text={text} textSize='medium' overlay={overlay} />
+      );
+    })
+  }
 
     renderTextContent = data => {
         const {text, text2, title, title2} = data
@@ -21,7 +30,6 @@ class HomePage extends Component {
                 <button className='btn'>
                     <Link to='/houses'>Zobacz wiecej</Link>
                 </button>
-                
             </section>
         )
     }
@@ -31,11 +39,11 @@ class HomePage extends Component {
     return (
       <div className='homePageWrapper'>
           {this.renderTextContent(textContent[0])}
-          <div>
-            dsdsds
+          <div className='imagesWrapper'>
+            {this.renderImages()}
           </div>
           <div>
-            dsdsd
+            <ImageContainer url='picture5' overlay text='is simply dummy text of the printing and typesetting. It has survived not only five centuries, but also the leap into'/>
           </div>
           {this.renderTextContent(textContent[1])}
       </div>

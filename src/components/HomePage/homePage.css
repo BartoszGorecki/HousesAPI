@@ -12,6 +12,11 @@
 .contentWrapper {
   padding: 40px;
 }
+.imagesWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
 .homePageWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;

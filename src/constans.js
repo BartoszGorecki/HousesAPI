@@ -1,3 +1,26 @@
+export const images = [
+    {
+        number: 'picture1',
+        text: '',
+        overlay: true
+    },
+    {
+        number: 'picture2',
+        text: '',
+        overlay: false
+    },
+    {
+        number: 'picture3',
+        text: '',
+        overlay: false
+    },
+    {
+        number: 'picture4',
+        text: 'is simply dummy text of the printing and typesetting. It has survived not only five centuries, but also the leap into',
+        overlay: true
+    }
+]
+
 export const url = 'http://mr-test-backend.sadek.usermd.net'
 
 export const textContent = [
