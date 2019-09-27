@@ -1,0 +1,8 @@
+.houseItem {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+  padding: 30px;
+  width: 200px;
+}

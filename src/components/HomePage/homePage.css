@@ -1,0 +1,38 @@
+.btn {
+  background: white;
+  border: 1px solid blue;
+  border-radius: 5px;
+  color: blue;
+  cursor: pointer;
+  display: block;
+  margin: 50px auto;
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
+.contentWrapper {
+  padding: 40px;
+}
+.homePageWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+.headerWrapper {
+  margin: 50px auto 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.mainHeader {
+  font-size: 30px;
+}
+.secondaryHeader {
+  color: blue;
+  font-size: 15px;
+}
+.textWrapper {
+  display: block;
+  margin-top: 20px;
+  padding: 0 30px;
+  text-align: center;
+}
