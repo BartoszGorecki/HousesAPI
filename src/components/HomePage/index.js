@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import "./homePage.css";
 import ImageContainer from '../ImageContainer';
 
-import {images, textContent} from '../../constans';
+import {imageText, images, textContent} from '../../constans';
 
 class HomePage extends Component {
 
@@ -43,7 +43,7 @@ class HomePage extends Component {
             {this.renderImages()}
           </div>
           <div>
-            <ImageContainer url='picture5' overlay text='is simply dummy text of the printing and typesetting. It has survived not only five centuries, but also the leap into'/>
+            <ImageContainer url='picture5' overlay text={imageText} />
           </div>
           {this.renderTextContent(textContent[1])}
       </div>

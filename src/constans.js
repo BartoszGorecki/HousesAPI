@@ -1,3 +1,5 @@
+export const imageText = 'is simply dummy text of the printing and typesetting. It has survived not only five centuries, but also the leap into'
+
 export const images = [
     {
         number: 'picture1',
@@ -37,3 +39,4 @@ export const textContent = [
         text2: 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with'
     }
 ]
+
