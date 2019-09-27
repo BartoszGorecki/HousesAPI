@@ -1,8 +1,15 @@
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 .houseItem {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   margin: 10px 20px;
   padding: 30px;
+  position: relative;
   width: 200px;
 }
